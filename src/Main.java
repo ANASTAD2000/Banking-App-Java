@@ -1,15 +1,22 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+        // Testing the Client class
+        Client client1 = new Client(1, "John", "Doe", "john.doe@example.com", "123 Main St", "123-456-7890");
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
-        }
+        // Display client details
+        System.out.println("Client ID: " + client1.getId());
+        System.out.println("First Name: " + client1.getFirstName());
+        System.out.println("Last Name: " + client1.getLastName());
+        System.out.println("Email: " + client1.getEmail());
+        System.out.println("Address: " + client1.getAddress());
+        System.out.println("Phone: " + client1.getPhone());
+
+        // Update client details
+        client1.setFirstName("Jane");
+        client1.setLastName("Smith");
+
+        // Display updated details
+        System.out.println("\nUpdated First Name: " + client1.getFirstName());
+        System.out.println("Updated Last Name: " + client1.getLastName());
     }
 }
