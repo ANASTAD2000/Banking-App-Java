@@ -4,70 +4,22 @@ public class Client {
     private String lastName;
     private String email;
     private String address;
-    private String phone;
+    private String phoneNumber;
 
-    public Client(int id, String firstName, String lastName, String email, String address, String phone) {
-        if (id > 0) {
-            this.id = id;
-        } else {
-            System.out.println("ID must be positive.");
-        }
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.email = email;
-        this.address = address;
-        this.phone = phone;
-    }
+    // Constructor and other methods...
 
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        if (id > 0) {
-            this.id = id;
-        } else {
-            System.out.println("ID must be positive.");
-        }
-    }
-
+    // Getter for firstName
     public String getFirstName() {
         return firstName;
     }
 
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
-    }
-
+    // Getter for lastName
     public String getLastName() {
         return lastName;
     }
 
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    public String getAddress() {
-        return address;
-    }
-
-    public void setAddress(String address) {
-        this.address = address;
-    }
-
-    public String getPhone() {
-        return phone;
-    }
-
-    public void setPhone(String phone) {
-        this.phone = phone;
+    // If you want to get the full name, you can create a getName() method
+    public String getName() {
+        return firstName + " " + lastName;  // Concatenate first and last name
     }
 }
