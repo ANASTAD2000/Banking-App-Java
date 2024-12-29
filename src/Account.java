@@ -1,18 +1,16 @@
-// Declaration of the Account class
 public abstract class Account {
-    // Attributes (properties)
-    private String accountNumber;  // Unique account number
-    private double balance;        // Current balance
-    private Client owner; // Reference to the account owner (Client object)
+    private String accountNumber;
+    private double balance;
+    private Client owner;
 
-    // Constructor
-    public Account(String accountNumber, double balance, Client owner) {
+    // Constructor with parameters
+    public Account() {
         this.accountNumber = accountNumber;
         this.balance = balance;
         this.owner = owner;
     }
 
-    // Getters and Setters
+    // Getters and setters
     public String getAccountNumber() {
         return accountNumber;
     }
@@ -38,6 +36,4 @@ public abstract class Account {
     }
 
     public abstract void displayAccountDetails();
-
 }
-
