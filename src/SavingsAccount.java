@@ -1,34 +1,32 @@
-public class SavingsAccount extends Account {
+import java.util.ArrayList;
 
-    // Instance variable for interest rate
+public class SavingsAccount extends Account {
     private double interestRate;
+    public static ArrayList<SavingsAccount> savingsAccounts = new ArrayList<>(); // To store all savings accounts
 
     // Constructor to initialize the savings account
     public SavingsAccount(String accountNumber, double balance, Client owner, double interestRate) {
-        // Call the parent class (Account) constructor to initialize common attributes
-        super(accountNumber, balance, owner);
-
-        // Initialize the interestRate for the savings account
+        super();
         this.interestRate = interestRate;
+        savingsAccounts.add(this); // Add this account to the list of savings accounts
     }
-    // Getter for interestRate
+
+    // Getter and setter for interest rate
     public double getInterestRate() {
         return interestRate;
     }
 
-    // Setter for interestRate
     public void setInterestRate(double interestRate) {
         this.interestRate = interestRate;
     }
 
-    // Implement the abstract method from Account class
+    // Implement abstract method to display account details
     @Override
     public void displayAccountDetails() {
-        // Display account details
+        System.out.println("Savings Account Details:");
         System.out.println("Account Number: " + getAccountNumber());
-        System.out.println("Account Balance: " + getBalance());
-        System.out.println("Account Owner: " + getOwner().getName());
+        System.out.println("Balance: " + getBalance());
+        System.out.println("Owner: " + getOwner().getFirstName() + " " + getOwner().getLastName());
         System.out.println("Interest Rate: " + interestRate + "%");
     }
 }
-
